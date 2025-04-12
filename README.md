@@ -3,7 +3,7 @@
 <p align="center">
   <img src="bilboTemp.png" alt="Bilbo Temp Monitor Screenshot" />
 </p>
-Bilbo is a lightweight, readable terminal dashboard for monitoring AMD GPU temperature, fan speed, and power draw using `sensors` and `awk` designed to be, light weight, fast and readable.
+Bilbo for Linux is a lightweight, readable terminal dashboard for monitoring AMD GPU temperature, fan speed, and power draw using `sensors` and `awk` designed to be, light weight, fast and readable.
 
 ## Features
 
