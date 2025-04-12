@@ -81,6 +81,6 @@ MIT. Make something useful, weird, or wonderful.
 ---
 
 ### Thanks to Bilbo
-"The best pair programming jack-a-poo you could ask for"
+*The best pair programming jack-a-poo you could ask for*
 
 ---
