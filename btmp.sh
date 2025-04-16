@@ -6,8 +6,8 @@ BEGIN {
 
 function emojiBlockByPct(p) {
   if (p < 15) return "🟦";
-  else if (p < 45) return "🟩";
-  else if (p < 65) return "🟨";
+  else if (p < 55) return "🟩";
+  else if (p < 70) return "🟨";
   else if (p < 85) return "🟧";
   else return "🟥";
 }
