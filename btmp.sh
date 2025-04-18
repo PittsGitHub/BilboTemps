@@ -1,7 +1,7 @@
 sensors | awk '
 BEGIN {
   # 🐾 Title Header
-  print "       🐾    Bilbo  -  AMD GPU watchdog reporting & borking    🐾"       
+  print "       🐾    Bilbo  -  AMD GPU watchdog reporting & borking    🐾"
   print " ────────────────────────────────────────────────────────────────────────── "
 }
 
@@ -20,7 +20,7 @@ function matchTextColourToBlockColour(block) {
   else if (block == "🟩") return "\033[32m"; # return green
   else if (block == "🟨") return "\033[33m"; # return yellow
   else if (block == "🟧") return "\033[33m"; # return yellow as orange value can be purple in some terminals
-  else if (block == "🟥") return "\033[33m"; # return red
+  else if (block == "🟥") return "\033[31m"; # return red
   else return "\033[39m" #terminal default colour
 }
 
