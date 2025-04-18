@@ -63,27 +63,27 @@ function printMetric(icon, label, unit, value, components) {
 # Note: adding +0 to each metric forces conversion to a number (not a string).
 /amdgpu/, /^$/ {
 
-   # 📈  Core Temp (Edge) — Reads and stores the core temperature
+   # 📈  Core Temp (edge) — Reads and stores the core temperature
   if ($1 ~ /edge:/) {
     storedCoreTempValue = substr($2, 2, length($2) - 5) + 0
   }
 
-  # 🔥  Hot Spot Temp (Junction) — Reads and stores the hottest point on the GPU
+  # 🔥  Hot Spot Temp (function) — Reads and stores the hottest point on the GPU
   else if ($1 ~ /junction:/) {
     storedJunctionTempValue = substr($2, 2, length($2) - 5) + 0
   }
 
-  # 🧠  Memory Temp — Reads and stores the VRAM temperature
+  # 🧠  Memory Temp (mem) — Reads and stores the VRAM temperature
   else if ($1 ~ /mem:/) {
     storedMemoryTempValue = substr($2, 2, length($2) - 5) + 0
   }
 
-  # ⚡  Power Drawn — Reads and stores the wattage drawn by the GPU
+  # ⚡  Power Drawn (PPT) — Reads and stores the wattage drawn by the GPU
   else if ($1 ~ /PPT:/) {
     storedPowerDrawnValue = $2 + 0
   }
 
-  # 🌀  Fan Speed — Reads and stores the GPU fan RPM
+  # 🌀  Fan Speed (fan1) — Reads and stores the GPU fan RPM
   else if ($1 ~ /fan1:/) {
     storedGpuFanRpmValue = $2 + 0
   }
