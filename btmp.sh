@@ -7,7 +7,7 @@ BEGIN {
 
 # 🎨 Return block based on percentage value
 function getBlockByPercentValue(percentValue) {
-  if (percentValue < 15) return "🟦";
+  if (percentValue < 20) return "🟦";
   else if (percentValue < 55) return "🟩";
   else if (percentValue < 70) return "🟨";
   else if (percentValue < 85) return "🟧";
@@ -51,9 +51,9 @@ function bufferPrintComponents(percentValue, components) {
 # 🖨️ Renders full output line with safe spacing
 function printMetric(icon, label, unit, value, components) {
 #We make sure our unit of measurment is at least 4 characters to ensure consistant styling
-  minimumUnitCharacters = 4
+  minimumUnitCharacters = 3
   while (length(unit) < minimumUnitCharacters)
-    unit = " " unit
+    unit =  unit " "
   printf "  %s  %-14s %s%4d %s\033[0m   %s\n", icon, label ":", components["color"], value, unit, components["bar"]
 }
 
@@ -121,7 +121,7 @@ END {
   maxPowerDraw = 360
   currentPowerDrawValueAsPercent = int((storedPowerDrawnValue / maxPowerDraw) * 100)
   bufferPrintComponents(currentPowerDrawValueAsPercent, components)
-  printMetric("⚡", "Power Draw", "  W", storedPowerDrawnValue, components)
+  printMetric("⚡", "Power Draw", "W", storedPowerDrawnValue, components)
 
   #  🌀  Fan Speed Output
   delete components
